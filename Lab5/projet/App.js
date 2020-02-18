@@ -8,7 +8,7 @@ import Delete from './Component/Delete'
 const Entry = (props) => {
   return (
     <View style={styles.entry}>
-      <TouchableOpacity onPress={props.toggle}>
+      <TouchableOpacity style={style.couleurUntoggled} onPress={props.toggle}>
       <Text>{props.title}</Text>
       </TouchableOpacity>
       <Delete action={() => this.removeItem(props.title)}/>
@@ -56,11 +56,11 @@ export default class App extends React.Component {
    if(item.state.todos.done == false)
    {
     item = { id: item.id, title: item.title,done: true }
-    this.entry.couleurtoggled 
+    this.TouchableOpacity.couleurtoggled 
    }
    else{
     item = { id: item.id, title: item.title,done: false }
-    this.entry.couleurUntoggled
+    this.TouchableOpacity.couleurUntoggled
   }
 
    //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
