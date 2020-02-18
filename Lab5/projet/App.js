@@ -8,7 +8,7 @@ import Delete from './Component/Delete'
 const Entry = (props) => {
   return (
     <View style={styles.entry}>
-      <TouchableOpacity style={styles.couleurUntoggled} onPress={props.toggle}>
+      <TouchableOpacity style={styles.couleurUntoggled} onPress={props.toggle(props)}>
       <Text>{props.title}</Text>
       </TouchableOpacity>
       <Delete action={() => removeItem(props)}/>
