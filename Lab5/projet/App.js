@@ -63,6 +63,7 @@ export default class App extends React.Component {
 
    //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
     item.setState({todos:[...item.state.todos,item]})
+    console.log(item.done)
   }
 
   removeItem(item) {
