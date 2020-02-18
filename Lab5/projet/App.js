@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList,TouchableOpacity } from 'react-native';
 import Header from './Component/Header';
 import InputBar from './Component/InputBar';
 import Delete from './Component/Delete'
