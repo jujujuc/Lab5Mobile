@@ -9,7 +9,7 @@ import Todoitem from './Component/Todoitem';
 const Entry = (props) => {
   return (
     <View style={styles.entry}>
-      <TouchableOpacity style={styles.textToDo} onPress={props.toggle(props)}>
+      <TouchableOpacity style={styles.textToDo} onPress={props.action.toggle(props)}>
       <Text>{props.title}</Text>
       </TouchableOpacity>
       <Delete action={() => removeItem(props)}/>
@@ -57,11 +57,11 @@ export default class App extends React.Component {
    if(item.state.todos.done == false)
    {
     item = { id: item.id, title: item.title,done: true }
-    this.TouchableOpacity.couleurtoggled 
+    this.TouchableOpacity.textDone 
    }
    else{
     item = { id: item.id, title: item.title,done: false }
-    this.TouchableOpacity.couleurUntoggled
+    this.TouchableOpacity.textToDo
   }
 
    //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
