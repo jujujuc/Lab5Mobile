@@ -2,15 +2,16 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import Header from './Component/Header';
 import InputBar from './Component/InputBar';
+import Delete from './Component/Delete'
 
 
 const Entry = (props) => {
   return (
     <View style={styles.entry}>
-     <TouchableOpacity 
-        onPress={props.toggle}>
+      <TouchableOpacity onPress={props.toggle}>
       <Text>{props.title}</Text>
-    </TouchableOpacity>
+      </TouchableOpacity>
+      <Delete action={() => this.removeItem()}/>
     </View>
   );
 };
