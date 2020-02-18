@@ -56,11 +56,11 @@ export default class App extends React.Component {
    if(item.state.todos.done == false)
    {
     item = { id: item.id, title: item.title,done: true }
-    this.style.couleurtoggled 
+    this.entry.couleurtoggled 
    }
    else{
     item = { id: item.id, title: item.title,done: false }
-    this.style.couleurUntoggled
+    this.entry.couleurUntoggled
   }
 
    //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
