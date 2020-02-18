@@ -125,9 +125,9 @@ const styles = StyleSheet.create({
     paddingLeft: 15
     },
   couleurtoggled: {
-    color: gray
+    color: 'gray'
   },
   couleurUntoggled: {
-    color: black
+    color: 'black'
   }
 });
