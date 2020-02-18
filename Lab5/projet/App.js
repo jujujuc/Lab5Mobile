@@ -11,7 +11,7 @@ const Entry = (props) => {
       <TouchableOpacity style={styles.couleurUntoggled} onPress={props.toggle}>
       <Text>{props.title}</Text>
       </TouchableOpacity>
-      <Delete action={() => this.removeItem(props.title)}/>
+      <Delete action={() => removeItem(props.title)}/>
     </View>
   );
 };
@@ -65,11 +65,10 @@ export default class App extends React.Component {
 
    //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
     item.setState({todos:[...item.state.todos,item]})
-
   }
 
   removeItem(item) {
-    this.setState({})
+    this.setState({todos : [todos.filter(todos => title != item)]})
 
   }
 
@@ -98,7 +97,7 @@ export default class App extends React.Component {
           <FlatList
             data={this.state.todos}
             renderItem={({ item }) => (
-              <Entry
+              <Entry 
                 id={item.id}
                 title={item.title}
               />
@@ -123,11 +122,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingLeft: 15
-    },
-  couleurtoggled: {
-    color: 'gray'
-  },
-  couleurUntoggled: {
-    color: 'black'
   }
 });
