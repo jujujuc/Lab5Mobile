@@ -4,15 +4,6 @@ import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native'
 const Delete = (props) => {
     return(
         <View style={styles.inputContainer}>
-            
-            {
-                // -- TOUCHABLE OPACITY
-                /*
-                    les props:
-                    onPress -> Action qui est déclenché quand on touche "TouchableOpacity" 
-                */
-            }
-
             <TouchableOpacity style={styles.homeMadeButton} 
             onPress={props.action}>
                 <Text style={styles.buttonText}>DELETE</Text>

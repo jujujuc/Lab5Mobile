@@ -45,30 +45,21 @@ export default class App extends React.Component {
 
   
   toggle(item) {
-    /* 
-    
-    A Faire:
-      fonction qui change l'etat d'un todo done: false -> true ( et inversement)
-
-    tips: La fonction Map peux etre utile
-    */
-   if(item.state.todos.done == false)
+   if(this.state.todos.done == false)
    {
     item = { id: item.id, title: item.title,done: true }
-    this.TouchableOpacity.textDone 
    }
    else{
     item = { id: item.id, title: item.title,done: false }
-    this.TouchableOpacity.textToDo
   }
 
    //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
-    item.setState({todos:[...item.state.todos,item]})
+    this.setState({todos:[...this.state.todos,item]})
   }
 
   removeItem(item) {
-    this.setState({todos : [todos.filter(todos => title != item)]})
-
+    const todos = this.state.todos.filter(todos => todos.id !== item.id)
+    this.setState({todos : todos})
   }
 
   render() {
@@ -85,7 +76,7 @@ export default class App extends React.Component {
             data={this.state.todos}
             renderItem={({ item }) => (
               <TodoItem 
-                todoItem={item}
+                todoItem={item} removeItem={() => this.removeItem(item)} toggle={() => this.toggle(item)}
               />
             )} 
           />

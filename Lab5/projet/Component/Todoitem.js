@@ -8,12 +8,13 @@ export default class TodoItem extends React.Component {
         const todoItem = this.props.todoItem;
 
         return (
-            <View style={styles.entry}>
-            <TouchableOpacity style={styles.TextToDo} onPress={props.action}>
-              <Text>{props.title}</Text>
+            <TouchableOpacity style={styles.todoItem} onPress={this.props.toggle}>
+              <Text style={todoItem.done?styles.textDone:styles.textTodo}>{todoItem.title}</Text>
+            <TouchableOpacity style={styles.todoRemoveButton} 
+            onPress={this.props.removeItem}>
+                <Text style={styles.buttonText}>DELETE</Text>
             </TouchableOpacity>
-            <Delete action={() => removeItem()}/>
-          </View>
+            </TouchableOpacity>
         );
     }
 }
