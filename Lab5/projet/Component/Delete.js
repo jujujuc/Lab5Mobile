@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
 
-const InputBar = (props) => {
+const Delete = (props) => {
     return(
         <View style={styles.inputContainer}>
             

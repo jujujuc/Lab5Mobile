@@ -9,6 +9,7 @@ const Entry = (props) => {
   return (
     <View style={styles.entry}>
       <Text>{props.title}</Text>
+      <Delete action={() => this.removeItem()}/>
     </View>
   );
 };
