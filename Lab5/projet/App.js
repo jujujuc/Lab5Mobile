@@ -3,12 +3,13 @@ import { StyleSheet, Text, View, FlatList,TouchableOpacity } from 'react-native'
 import Header from './Component/Header';
 import InputBar from './Component/InputBar';
 import Delete from './Component/Delete'
+import Todoitem from './Component/Todoitem';
 
 
 const Entry = (props) => {
   return (
     <View style={styles.entry}>
-      <TouchableOpacity style={styles.couleurUntoggled} onPress={props.toggle(props)}>
+      <TouchableOpacity style={styles.textToDo} onPress={props.toggle(props)}>
       <Text>{props.title}</Text>
       </TouchableOpacity>
       <Delete action={() => removeItem(props.title)}/>
