@@ -56,11 +56,11 @@ export default class App extends React.Component {
    if(item.state.todos.done == false)
    {
     item = { id: item.id, title: item.title,done: true }
-    this.entry.couleurtoggled 
+    this.style.couleurtoggled 
    }
    else{
     item = { id: item.id, title: item.title,done: false }
-    this.entry.couleurUntoggled
+    this.style.couleurUntoggled
   }
 
    //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
@@ -98,7 +98,7 @@ export default class App extends React.Component {
           <FlatList
             data={this.state.todos}
             renderItem={({ item }) => (
-              <Entry
+              <Entry style={style.couleurUntoggled}
                 id={item.id}
                 title={item.title}
               />
