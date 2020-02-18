@@ -98,7 +98,7 @@ export default class App extends React.Component {
           <FlatList
             data={this.state.todos}
             renderItem={({ item }) => (
-              <Entry style={style.couleurUntoggled}
+              <Entry
                 id={item.id}
                 title={item.title}
               />
