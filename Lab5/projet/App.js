@@ -11,7 +11,7 @@ const Entry = (props) => {
       <TouchableOpacity onPress={props.toggle}>
       <Text>{props.title}</Text>
       </TouchableOpacity>
-      <Delete action={() => this.removeItem()}/>
+      <Delete action={() => this.removeItem(props.title)}/>
     </View>
   );
 };
@@ -30,11 +30,8 @@ export default class App extends React.Component {
 
   addNewEntries() {
     var newEntry = { id: this.state.todos.length, title: this.state.todoInput }
-    
-    
-    
-    
-    this.setState({ todos: [...this.state.todos, newEntry] });
+      
+    this.setState({ todos: [newEntry, ...this.state.todos] });
 
 
     /*
@@ -72,14 +69,7 @@ export default class App extends React.Component {
   }
 
   removeItem(item) {
-    /* 
-
-    A faire:
-      fonction qui delete un todo (item)
-      
-    tips: La fonction Filter peux etre utile
-    
-    */
+    this.setState({})
 
   }
 
