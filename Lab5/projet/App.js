@@ -11,7 +11,7 @@ const Entry = (props) => {
       <TouchableOpacity style={styles.couleurUntoggled} onPress={props.toggle}>
       <Text>{props.title}</Text>
       </TouchableOpacity>
-      <Delete action={() => removeItem(props.title)}/>
+      <Delete action={() => removeItem(props)}/>
     </View>
   );
 };
