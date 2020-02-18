@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity} from 'react-native';
+import Delete from './Delete';
 
 export default class TodoItem extends React.Component {
 
@@ -7,13 +8,12 @@ export default class TodoItem extends React.Component {
         const todoItem = this.props.todoItem;
 
         return (
-            <TouchableOpacity 
-            /* A faire */
-            >
-
-                {/* A faire */}
-
+            <View style={styles.entry}>
+            <TouchableOpacity style={styles.TextToDo} onPress={props.action}>
+              <Text>{props.title}</Text>
             </TouchableOpacity>
+            <Delete action={() => removeItem()}/>
+          </View>
         );
     }
 }

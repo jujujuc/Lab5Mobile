@@ -3,19 +3,17 @@ import { StyleSheet, Text, View, FlatList,TouchableOpacity } from 'react-native'
 import Header from './Component/Header';
 import InputBar from './Component/InputBar';
 import Delete from './Component/Delete'
-import Todoitem from './Component/Todoitem';
+import TodoItem from './Component/Todoitem';
 
-
+{
+  /*
 const Entry = (props) => {
   return (
-    <View style={styles.entry}>
-      <TouchableOpacity style={styles.TextToDo} onPress={props.action}>
-        <Text>{props.title}</Text>
-      </TouchableOpacity>
-      <Delete action={() => removeItem()}/>
-    </View>
+
   );
 };
+*/
+}
 
 
 export default class App extends React.Component {
@@ -82,27 +80,14 @@ export default class App extends React.Component {
           onChangeText={todoInput => this.setState({ todoInput })}
           action={() => this.addNewEntries()}
         />
-
-        {/*
-        code du prof
-
-
-                <InputBar 
-        addNewItem={() => this.addNewItem() }
-        textChange={todoInput => this.setState({todoInput})} 
-        todoInput={this.state.todoInput}
-        />
-
-        */}
         {
           <FlatList
             data={this.state.todos}
             renderItem={({ item }) => (
-              <Entry 
-                id={item.id}
-                title={item.title}
+              <TodoItem 
+                todoItem={item}
               />
-            )}
+            )} 
           />
         }
       </View>
