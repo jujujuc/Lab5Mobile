@@ -9,7 +9,7 @@ import Todoitem from './Component/Todoitem';
 const Entry = (props) => {
   return (
     <View style={styles.entry}>
-      <TouchableOpacity style={styles.textToDo} onPress={props.action.toggle}>
+      <TouchableOpacity style={styles.textToDo} onPress={props.action}>
       <Text>{props.title}</Text>
       </TouchableOpacity>
       <Delete action={() => removeItem(props)}/>
