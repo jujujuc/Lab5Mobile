@@ -7,7 +7,10 @@ import InputBar from './Component/InputBar';
 const Entry = (props) => {
   return (
     <View style={styles.entry}>
+     <TouchableOpacity 
+        onPress={props.toggle}>
       <Text>{props.title}</Text>
+    </TouchableOpacity>
     </View>
   );
 };
@@ -63,7 +66,6 @@ export default class App extends React.Component {
 
    //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
     item.setState({todos:[...item.state.todos,item]})
-    console.log(item.done)
   }
 
   removeItem(item) {
@@ -103,7 +105,7 @@ export default class App extends React.Component {
           <FlatList
             data={this.state.todos}
             renderItem={({ item }) => (
-              <Entry
+              <Entry 
                 id={item.id}
                 title={item.title}
               />
