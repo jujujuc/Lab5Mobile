@@ -45,16 +45,16 @@ export default class App extends React.Component {
 
   
   toggle(item) {
-   if(this.state.todos.done == false)
-   {
-    item = { id: item.id, title: item.title,done: true }
-   }
-   else{
-    item = { id: item.id, title: item.title,done: false }
-  }
+    const array = this.state.todos;
+    array.map((elem) =>
+      {
+        if(elem.id === item.id){
+          item.done = !item.done
+        }
+      })
 
    //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
-    this.setState({todos:[...this.state.todos,item]})
+    this.setState({todos: array})
   }
 
   removeItem(item) {
