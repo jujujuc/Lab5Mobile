@@ -9,10 +9,10 @@ import Todoitem from './Component/Todoitem';
 const Entry = (props) => {
   return (
     <View style={styles.entry}>
-      <TouchableOpacity style={styles.textToDo} onPress={props.action}>
-      <Text>{props.title}</Text>
+      <TouchableOpacity style={styles.TextToDo} onPress={props.action}>
+        <Text>{props.title}</Text>
       </TouchableOpacity>
-      <Delete action={() => removeItem(props)}/>
+      <Delete action={() => removeItem()}/>
     </View>
   );
 };

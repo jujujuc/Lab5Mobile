@@ -3,8 +3,6 @@ import { StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 export default class TodoItem extends React.Component {
 
-    /* A faire ? */
-
     render(){
         const todoItem = this.props.todoItem;
 
