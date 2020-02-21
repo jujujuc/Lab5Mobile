@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity} from 'react-native';
-import Delete from './Delete';
 
 export default class TodoItem extends React.Component {
 

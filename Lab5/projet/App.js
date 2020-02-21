@@ -2,18 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList,TouchableOpacity } from 'react-native';
 import Header from './Component/Header';
 import InputBar from './Component/InputBar';
-import Delete from './Component/Delete'
 import TodoItem from './Component/Todoitem';
-
-{
-  /*
-const Entry = (props) => {
-  return (
-
-  );
-};
-*/
-}
 
 
 export default class App extends React.Component {
@@ -26,21 +15,12 @@ export default class App extends React.Component {
       ]
     }
   }
-
+  id = 1;
   addNewEntries() {
-    var newEntry = { id: this.state.todos.length, title: this.state.todoInput }
+    var newEntry = { id: this.id, title: this.state.todoInput }
+    this.id++
       
     this.setState({ todos: [newEntry, ...this.state.todos] });
-
-
-    /*
-    code par le prof 
-
-      this.setState({
-      todos,
-      todoInput: ''
-    });
-    */
   }
 
   
@@ -52,8 +32,6 @@ export default class App extends React.Component {
           item.done = !item.done
         }
       })
-
-   //il faut juste ajuster la couleur du texte et tout devrait être good pour totalement tester
     this.setState({todos: array})
   }
 
